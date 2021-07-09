@@ -1,5 +1,13 @@
 version: 2.h
+version: 2.1
 
+jobs:
+  build:
+      machine:
+            resource_class: gpu.nvidia.small
+                  image: ubuntu-1604-cuda-10.1:201909-23
+                      steps:
+                            - run: nvidia-smi
 orbs:
   # The python orb contains a set of prepackaged CircleCI configuration you can use repeatedly in your configuration files
   # Orb commands and jobs help you with common scripting around a language/tool
